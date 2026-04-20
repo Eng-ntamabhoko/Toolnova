@@ -1,0 +1,327 @@
+﻿        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M11.25 4.5a.75.75 0 0 1 1.5 0v6.19l4.72 2.72a.75.75 0 0 1-.75 1.3l-5.1-2.94a.75.75 0 0 1-.37-.65V4.5Z"/>
+                                            <path fill-rule="evenodd" d="M12 2.25a9.75 9.75 0 1 0 9.75 9.75A9.761 9.761 0 0 0 12 2.25Zm-8.25 9.75a8.25 8.25 0 1 1 8.25 8.25A8.259 8.259 0 0 1 3.75 12Z" clip-rule="evenodd"/>
+                                        </svg>
+                                        {{ $slide->title }}
+                                    </span>
+
+                                    <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                                        {{ $slide->title }}
+                                    </h1>
+
+                                    @if($slide->description)
+                                        <p class="mt-5 max-w-2xl mx-auto text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+                                            {{ $slide->description }}
+                                        </p>
+                                    @endif
+                                </div>
+
+                                <!-- Tool Icons Grid -->
+                                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6">
+                                    <!-- Age Calculator -->
+                                    <a href="{{ url('/tools/age-calculator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700 mb-3 group-hover:bg-blue-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v.75h9V3a.75.75 0 0 1 1.5 0v.75h.75A2.25 2.25 0 0 1 21 6v12.75A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V6a2.25 2.25 0 0 1 2.25-2.25H6V3a.75.75 0 0 1 .75-.75ZM4.5 9.75v9a.75.75 0 0 0 .75.75h13.5a.75.75 0 0 0 .75-.75v-9H4.5Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Age Calculator</span>
+                                    </a>
+
+                                    <!-- Word Counter -->
+                                    <a href="{{ url('/tools/word-counter') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 mb-3 group-hover:bg-emerald-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M7.5 6.75h9M7.5 11.25h9m-9 4.5h6"/>
+                                                <path fill-rule="evenodd" d="M5.25 3.75A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Word Counter</span>
+                                    </a>
+
+                                    <!-- Password Generator -->
+                                    <a href="{{ url('/tools/password-generator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-violet-100 text-violet-700 mb-3 group-hover:bg-violet-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M16.5 10.5V7.875a4.5 4.5 0 1 0-9 0V10.5m-.75 0h10.5A1.5 1.5 0 0 1 18.75 12v6A1.5 1.5 0 0 1 17.25 19.5H6.75A1.5 1.5 0 0 1 5.25 18v-6A1.5 1.5 0 0 1 6.75 10.5Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Password Generator</span>
+                                    </a>
+
+                                    <!-- JSON Formatter -->
+                                    <a href="{{ url('/tools/json-formatter') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-amber-100 text-amber-700 mb-3 group-hover:bg-amber-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M8.25 6.75c-1.657 0-3 1.343-3 3v.75c0 .414-.336.75-.75.75H3m5.25 6c-1.657 0-3-1.343-3-3v-.75c0-.414-.336-.75-.75-.75H3m12.75-6c1.657 0 3 1.343 3 3v.75c0 .414.336.75.75.75H21m-5.25 6c1.657 0 3-1.343 3-3v-.75c0-.414.336-.75.75-.75H21"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">JSON Formatter</span>
+                                    </a>
+
+                                    <!-- QR Code Generator -->
+                                    <a href="{{ url('/tools/qr-code-generator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-rose-100 text-rose-700 mb-3 group-hover:bg-rose-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM9 9a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H9Zm-3 3a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H6Zm6-6a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H12Zm-3 3a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H9Zm6 0a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H15Zm-6 3a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H9Zm6 0a.75.75 0 0 0 0 1.5h.008a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">QR Generator</span>
+                                    </a>
+
+                                    <!-- Text Case Converter -->
+                                    <a href="{{ url('/tools/text-case-converter') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-cyan-100 text-cyan-700 mb-3 group-hover:bg-cyan-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M5.25 2.25A.75.75 0 0 1 6 3v.75h.75a.75.75 0 0 1 0 1.5H6v.75a.75.75 0 0 1-1.5 0V6H3.75a.75.75 0 0 1 0-1.5H4.5V3a.75.75 0 0 1 .75-.75Zm6 0a.75.75 0 0 1 .75.75v2.25h.75a.75.75 0 0 1 0 1.5h-.75v.75a.75.75 0 0 1-1.5 0v-.75H9a.75.75 0 0 1 0-1.5h.75V3a.75.75 0 0 1 .75-.75ZM12 9a.75.75 0 0 1 .75.75v2.25h.75a.75.75 0 0 1 0 1.5h-.75v.75a.75.75 0 0 1-1.5 0v-.75h-.75a.75.75 0 0 1 0-1.5h.75V9.75A.75.75 0 0 1 12 9Zm-7.5 6a.75.75 0 0 1 .75.75v2.25h.75a.75.75 0 0 1 0 1.5h-.75v.75a.75.75 0 0 1-1.5 0v-.75H3a.75.75 0 0 1 0-1.5h.75V15.75a.75.75 0 0 1 .75-.75Zm10.5 0a.75.75 0 0 1 .75.75v2.25h.75a.75.75 0 0 1 0 1.5h-.75v.75a.75.75 0 0 1-1.5 0v-.75h-.75a.75.75 0 0 1 0-1.5h.75V15.75a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Text Converter</span>
+                                    </a>
+
+                                    <!-- Image Compressor -->
+                                    <a href="{{ url('/tools/image-compressor') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-indigo-100 text-indigo-700 mb-3 group-hover:bg-indigo-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5a.75.75 0 0 0 .75-.75V7.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Image Compressor</span>
+                                    </a>
+
+                                    <!-- Image Resizer -->
+                                    <a href="{{ url('/tools/image-resizer') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-pink-100 text-pink-700 mb-3 group-hover:bg-pink-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5a.75.75 0 0 0 .75-.75V7.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Image Resizer</span>
+                                    </a>
+
+                                    <!-- Resume Builder -->
+                                    <a href="{{ url('/tools/resume-builder') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-teal-100 text-teal-700 mb-3 group-hover:bg-teal-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M7.5 3.75A2.25 2.25 0 0 0 5.25 6v12A2.25 2.25 0 0 0 7.5 20.25h9A2.25 2.25 0 0 0 18.75 18V8.56a2.25 2.25 0 0 0-.659-1.591l-2.81-2.81A2.25 2.25 0 0 0 13.69 3.5H7.5Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Resume Builder</span>
+                                    </a>
+
+                                    <!-- Invoice Generator -->
+                                    <a href="{{ url('/tools/invoice-generator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-orange-100 text-orange-700 mb-3 group-hover:bg-orange-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M3.75 5.25A2.25 2.25 0 0 1 6 3h12a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 18 21H6a2.25 2.25 0 0 1-2.25-2.25V5.25ZM6 4.5a.75.75 0 0 0-.75.75v2.25h13.5V5.25A.75.75 0 0 0 18 4.5H6Zm1.5 6.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75Zm0 3.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 7.5 15Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Invoice Generator</span>
+                                    </a>
+
+                                    <!-- Base64 Encoder/Decoder -->
+                                    <a href="{{ url('/tools/base64-encoder-decoder') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-lime-100 text-lime-700 mb-3 group-hover:bg-lime-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M14.5 10.5a2.5 2.5 0 0 0-5 0v3a2.5 2.5 0 0 0 5 0v-3Zm-2.5-1.5a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1Z" clip-rule="evenodd"/>
+                                                <path d="M3 4.5A1.5 1.5 0 0 1 4.5 3h15A1.5 1.5 0 0 1 21 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-15Zm1.5 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-15a.5.5 0 0 0-.5-.5h-15Z"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Base64 Encoder</span>
+                                    </a>
+
+                                    <!-- Random Name Generator -->
+                                    <a href="{{ url('/tools/random-name-generator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-fuchsia-100 text-fuchsia-700 mb-3 group-hover:bg-fuchsia-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M4.5 2.25a.75.75 0 0 0 0 1.5v16.5a.75.75 0 0 0 1.5 0V3.75h16.5a.75.75 0 0 0 0-1.5H4.5Zm12.75 4.5a.75.75 0 0 0 0 1.5v7.5a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-1.5 0ZM8.25 6.75a.75.75 0 0 0 0 1.5v7.5a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-1.5 0Zm4.5 4.5a.75.75 0 0 0 0 1.5v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Random Names</span>
+                                    </a>
+
+                                    <!-- Percentage Calculator -->
+                                    <a href="{{ url('/tools/percentage-calculator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-sky-100 text-sky-700 mb-3 group-hover:bg-sky-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">% Calculator</span>
+                                    </a>
+
+                                    <!-- Discount Calculator -->
+                                    <a href="{{ url('/tools/discount-calculator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 mb-3 group-hover:bg-emerald-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M9.375 3a1.875 1.875 0 0 0 0 3.75h1.875v4.65a3 3 0 1 0 4.9 2.1l-.97-.97a.75.75 0 0 1 1.06-1.06l2.22 2.22a.75.75 0 0 1 0 1.06l-2.22 2.22a.75.75 0 0 1-1.06-1.06l.97-.97a1.5 1.5 0 1 1-2.45-1.05V8.625H9.375a1.875 1.875 0 0 0 0-3.75H7.5V1.5a.75.75 0 0 0-1.5 0v3.375H3a.75.75 0 0 0 0 1.5h3.375v3.75H7.5a.75.75 0 0 0 0 1.5h1.875v4.125a4.5 4.5 0 0 1-1.5 8.625.75.75 0 0 0 0 1.5 6 6 0 0 0 6-6V8.625h1.875a1.875 1.875 0 1 0 0-3.75H9.375Z"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Discount Calc</span>
+                                    </a>
+
+                                    <!-- Loan Calculator -->
+                                    <a href="{{ url('/tools/loan-calculator') }}" class="group flex flex-col items-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-purple-100 text-purple-700 mb-3 group-hover:bg-purple-200 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M4.5 3.75a1 1 0 0 0-1 1v.5c0 2.9 2.35 5.25 5.25 5.25h.75a.75.75 0 0 0 0-1.5H8.75A3.75 3.75 0 0 1 5 4.25v-.5a.25.25 0 0 1 .25-.25h11.5a.25.25 0 0 1 .25.25v.5A3.75 3.75 0 0 1 13.25 9h-.75a.75.75 0 0 0 0 1.5h.75A5.25 5.25 0 0 0 18 4.25v-.5a1 1 0 0 0-1-1H4.5Z"/>
+                                                <path fill-rule="evenodd" d="M2.25 10.5a.75.75 0 0 0 0 1.5h19.5a.75.75 0 0 0 0-1.5H2.25Zm0 6a.75.75 0 0 0 0 1.5h19.5a.75.75 0 0 0 0-1.5H2.25Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium text-white text-center">Loan Calculator</span>
+                                    </a>
+                                </div>
+
+                                @if($slide->button_text && $slide->button_url)
+                                    <div class="text-center mt-12">
+                                        <a href="{{ $slide->button_url }}" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-700 hover:scale-105">
+                                            {{ $slide->button_text }}
+                                        </a>
+                                    </div>
+                                @endif
+                            </div>
+        </div>
+
+        <div class="relative border-t border-white/10">
+            <div class="mx-auto grid max-w-7xl gap-4 px-4 py-6 text-sm text-slate-300 sm:grid-cols-3 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-3">
+                    <span class="rounded-xl bg-white/5 p-2 text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.25 3.75a.75.75 0 0 1 1.5 0v8.25h8.25a.75.75 0 0 1 0 1.5h-8.25v8.25a.75.75 0 0 1-1.5 0V13.5H3a.75.75 0 0 1 0-1.5h8.25V3.75Z"/>
+                        </svg>
+                    </span>
+                    <span>15 active tools</span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <span class="rounded-xl bg-white/5 p-2 text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3.75 5.25A2.25 2.25 0 0 1 6 3h12a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 18 21H6a2.25 2.25 0 0 1-2.25-2.25V5.25ZM6 4.5a.75.75 0 0 0-.75.75v2.25h13.5V5.25A.75.75 0 0 0 18 4.5H6Z" clip-rule="evenodd"/>
+                        </svg>
+                    </span>
+                    <span>Clean, organized tool pages</span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <span class="rounded-xl bg-white/5 p-2 text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 1.5a8.25 8.25 0 0 0-8.25 8.25c0 2.187.85 4.176 2.236 5.655-.24.852-.65 1.83-1.392 2.854a.75.75 0 0 0 .952 1.124c1.16-.57 2.323-.96 3.21-1.202A8.214 8.214 0 0 0 12 18a8.25 8.25 0 1 0 0-16.5Z" clip-rule="evenodd"/>
+                        </svg>
+                    </span>
+                    <span>Built for simple daily use</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tools -->
+    <section class="py-8 sm:py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Popular Tools</h2>
+                    <p class="mt-2 text-slate-600">
+                        Quick access to useful tools with a cleaner layout.
+                    </p>
+                </div>
+
+                <a href="{{ url('/tools') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">
+                    View all tools
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.97 4.97a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4.5a.75.75 0 0 1 0-1.5h13.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                <a href="{{ url('/tools/age-calculator') }}" class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/30">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v.75h9V3a.75.75 0 0 1 1.5 0v.75h.75A2.25 2.25 0 0 1 21 6v12.75A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V6a2.25 2.25 0 0 1 2.25-2.25H6V3a.75.75 0 0 1 .75-.75ZM4.5 9.75v9a.75.75 0 0 0 .75.75h13.5a.75.75 0 0 0 .75-.75v-9H4.5Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-700">Age Calculator</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600">Calculate exact age in years, months, days and more.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{{ url('/tools/word-counter') }}" class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/30">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.5 6.75h9M7.5 11.25h9m-9 4.5h6"/>
+                                <path fill-rule="evenodd" d="M5.25 3.75A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-700">Word Counter</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600">Count words, characters, sentences and reading time instantly.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{{ url('/tools/password-generator') }}" class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/30">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-violet-100 text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.5 10.5V7.875a4.5 4.5 0 1 0-9 0V10.5m-.75 0h10.5A1.5 1.5 0 0 1 18.75 12v6A1.5 1.5 0 0 1 17.25 19.5H6.75A1.5 1.5 0 0 1 5.25 18v-6A1.5 1.5 0 0 1 6.75 10.5Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-700">Password Generator</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600">Generate strong random passwords for websites and apps.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{{ url('/tools/json-formatter') }}" class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/30">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8.25 6.75c-1.657 0-3 1.343-3 3v.75c0 .414-.336.75-.75.75H3m5.25 6c-1.657 0-3-1.343-3-3v-.75c0-.414-.336-.75-.75-.75H3m12.75-6c1.657 0 3 1.343 3 3v.75c0 .414.336.75.75.75H21m-5.25 6c1.657 0 3-1.343 3-3v-.75c0-.414.336-.75.75-.75H21"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-700">JSON Formatter</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600">Format, validate and minify JSON data online.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{{ url('/tools/resume-builder') }}" class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/30">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-100 text-rose-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M7.5 3.75A2.25 2.25 0 0 0 5.25 6v12A2.25 2.25 0 0 0 7.5 20.25h9A2.25 2.25 0 0 0 18.75 18V8.56a2.25 2.25 0 0 0-.659-1.591l-2.81-2.81A2.25 2.25 0 0 0 13.69 3.5H7.5Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-700">Resume Builder</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600">Build a clean ATS-friendly resume with live preview.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{{ url('/tools/invoice-generator') }}" class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/30">
+                    <div class="flex items-start gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-100 text-cyan-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3.75 5.25A2.25 2.25 0 0 1 6 3h12a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 18 21H6a2.25 2.25 0 0 1-2.25-2.25V5.25ZM6 4.5a.75.75 0 0 0-.75.75v2.25h13.5V5.25A.75.75 0 0 0 18 4.5H6Zm1.5 6.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75Zm0 3.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 7.5 15Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-700">Invoice Generator</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600">Create professional invoices with automatic totals.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+@endsection

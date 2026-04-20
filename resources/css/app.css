@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* Keyboard: first tab lands on skip link, then jumps to main */
+.skip-to-content {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 100;
+    border-radius: 0.75rem;
+    background: white;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0f172a;
+    box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.12),
+        0 4px 6px -4px rgb(0 0 0 / 0.08);
+    transform: translateY(-180%);
+    transition: transform 0.2s ease;
+}
+.skip-to-content:focus {
+    transform: translateY(0);
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+body {
+    background-color: #f8fafc;
+}
+
+/* Slideshow animations */
+@keyframes gradient-x {
+    0%, 100% {
+        background-size: 200% 200%;
+        background-position: left center;
+    }
+    50% {
+        background-size: 200% 200%;
+        background-position: right center;
+    }
+}
+
+.animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1.2s ease-out 0.2s both;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media print {
+    header,
+    footer,
+    aside,
+    button,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    section,
+    div {
+        box-shadow: none !important;
+    }
+}
+/* Loan calculator mobile safety */
+@media (max-width: 640px) {
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        white-space: nowrap;
+    }
+}
+@media print {
+    .print\:hidden {
+        display: none !important;
+    }
+
+    .print\:block {
+        display: block !important;
+    }
+
+    .print\:border-0 {
+        border: 0 !important;
+    }
+
+    .print\:shadow-none {
+        box-shadow: none !important;
+    }
+
+    .print\:rounded-none {
+        border-radius: 0 !important;
+    }
+
+    .print\:p-0 {
+        padding: 0 !important;
+    }
+
+    .print\:max-w-none {
+        max-width: none !important;
+    }
+
+    .print\:px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .print\:py-0 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    body {
+        background: white !important;
+    }
+}
+@media print {
+    .print\:hidden {
+        display: none !important;
+    }
+
+    .print\:block {
+        display: block !important;
+    }
+
+    .print\:border-0 {
+        border: 0 !important;
+    }
+
+    .print\:shadow-none {
+        box-shadow: none !important;
+    }
+
+    .print\:rounded-none {
+        border-radius: 0 !important;
+    }
+
+    .print\:max-w-none {
+        max-width: none !important;
+    }
+
+    .print\:px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .print\:py-0 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+@media print {
+    .print\:hidden {
+        display: none !important;
+    }
+
+    .print\:block {
+        display: block !important;
+    }
+
+    .print\:border-0 {
+        border: 0 !important;
+    }
+
+    .print\:shadow-none {
+        box-shadow: none !important;
+    }
+
+    .print\:rounded-none {
+        border-radius: 0 !important;
+    }
+
+    .print\:max-w-none {
+        max-width: none !important;
+    }
+
+    .print\:px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .print\:py-0 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    body {
+        background: #ffffff !important;
+    }
+}
+
+.resume-section,
+.resume-block,
+.resume-chip-list {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
