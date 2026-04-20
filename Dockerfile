@@ -2,31 +2,25 @@ FROM php:8.2-cli
 
 WORKDIR /app
 
-# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    unzip \
-    git \
-    curl \
-    libzip-dev \
-    zip
+    unzip git curl libzip-dev zip
 
-# Install PHP extensions
 RUN docker-php-ext-install pdo pdo_mysql zip
 
-# Copy project files
-COPY . .
-
-# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Install Laravel dependencies
+COPY . .
+
 RUN composer install --no-dev --optimize-autoloader
 
-# Set permissions
 RUN chmod -R 775 storage bootstrap/cache
 
-# Expose port Render uses
+# Create SQLite file automatically
+RUN touch database/database.sqlite
+
 EXPOSE 10000
 
-# Start Laravel
-CMD php artisan serve --host=0.0.0.0 --port=10000
+CMD php artisan config:clear && \
+    php artisan cache:clear && \
+    php artisan migrate --force || true && \
+    php artisan serve --host=0.0.0.0 --port=10000
