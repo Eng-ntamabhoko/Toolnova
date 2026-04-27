@@ -13,6 +13,8 @@ RUN apk add --no-cache \
     git \
     zip \
     unzip \
+    nodejs \
+npm \
     postgresql-client \
     mysql-client \
     libpng-dev \
