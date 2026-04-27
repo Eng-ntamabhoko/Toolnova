@@ -1,0 +1,69 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env.local
+.env.*.local
+.env.example (do NOT ignore this)
+
+# Dependencies (will be installed via composer/npm)
+vendor/
+node_modules/
+
+# Build output (will be rebuilt)
+public/build/
+dist/
+
+# Storage files (will be created at runtime)
+storage/logs/
+storage/cache/
+storage/sessions/
+storage/views/
+
+# Database files (for development, not needed in production)
+database/*.sqlite
+database/*.sqlite-wal
+database/*.sqlite-shm
+
+# Testing
+tests/
+phpunit.xml
+.phpunit.result.cache
+
+# Documentation
+README.md
+docs/
+CHANGELOG.md
+
+# OS files
+.DS_Store
+Thumbs.db
+.windows-build-tools
+npm-debug.log
+yarn-error.log
+composer.lock (if you want smaller images, comment this out)
+
+# Temporary files
+temp/
+tmp/
+*.log
+*.pid
+*.seed
+
+# Development only files
+docker-compose.yml
+.docker/
+Dockerfile.dev
+.env.example
+bootstrap/cache/*
