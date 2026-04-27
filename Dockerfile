@@ -18,6 +18,7 @@ RUN apk add --no-cache \
     libpng-dev \
     libjpeg-turbo-dev \
     freetype-dev \
+    postgresql-dev \
     gettext-dev
 
 # Install PHP extensions
