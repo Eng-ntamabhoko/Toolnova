@@ -54,12 +54,12 @@ RUN composer install \
 RUN npm install && npm run build
 
 # Set proper permissions for Laravel (storage & bootstrap/cache)
-RUN chmod -R 755 /app && \
-    chmod -R 777 /app/storage && \
-    chmod -R 777 /app/bootstrap/cache && \
-    mkdir -p /app/database && \
-    chmod -R 777 /app/database
-
+RUN mkdir -p /app/storage/framework/views && \
+    mkdir -p /app/storage/framework/cache && \
+    mkdir -p /app/storage/framework/sessions && \
+    mkdir -p /app/storage/logs && \
+    chmod -R 775 /app/storage && \
+    chmod -R 775 /app/bootstrap/cache
 # Expose port 10000 (required by Render)
 EXPOSE 10000
 
@@ -69,4 +69,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Run Laravel development server (simple & lightweight)
 # In production, Render's load balancer handles routing
-CMD sh -c "php artisan config:clear && php artisan migrate --force && php artisan db:seed --class=ToolSeeder --force && php artisan serve --host=0.0.0.0 --port=10000"
+CMD sh -c "php artisan config:clear && php artisan view:clear && php artisan migrate --force && php artisan db:seed --class=ToolSeeder --force && php artisan serve --host=0.0.0.0 --port=10000"
