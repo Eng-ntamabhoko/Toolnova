@@ -69,4 +69,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Run Laravel development server (simple & lightweight)
 # In production, Render's load balancer handles routing
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=10000"]
+CMD sh -c "php artisan config:clear && php artisan cache:clear && php artisan migrate --force && php artisan db:seed --class=ToolSeeder --force && php artisan serve --host=0.0.0.0 --port=10000"
