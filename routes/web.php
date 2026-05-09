@@ -385,3 +385,54 @@ Route::prefix('tools')->group(function () {
     Route::post('/lesson-plan-generator/generate-draft', [LessonPlanController::class, 'generateDraft'])->name('tools.lesson-plan.generate-draft');
     Route::post('/lesson-plan-generator/save-draft', [LessonPlanController::class, 'saveDraft'])->name('tools.lesson-plan.save-draft');
 });
+Route::get('/robots.txt', function () {
+    return response(
+        "User-agent: *\n" .
+        "Allow: /\n\n" .
+        "Sitemap: " . url('/sitemap.xml') . "\n",
+        200
+    )->header('Content-Type', 'text/plain');
+});
+
+Route::get('/sitemap.xml', function () {
+    $urls = [
+        '/',
+        '/tools',
+        '/tools/age-calculator',
+        '/tools/word-counter',
+        '/tools/password-generator',
+        '/tools/json-formatter',
+        '/tools/qr-code-generator',
+        '/tools/image-compressor',
+        '/tools/image-resizer',
+        '/tools/percentage-calculator',
+        '/tools/discount-calculator',
+        '/tools/loan-calculator',
+        '/tools/base64-encoder-decoder',
+        '/tools/text-case-converter',
+        '/tools/random-name-generator',
+        '/tools/resume-builder',
+        '/tools/cv-builder',
+        '/tools/invoice-generator',
+        '/tools/lesson-plan-generator',
+        '/about',
+        '/contact',
+        '/privacy-policy',
+        '/terms',
+    ];
+
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+    foreach ($urls as $url) {
+        $xml .= '<url>';
+        $xml .= '<loc>' . e(url($url)) . '</loc>';
+        $xml .= '<changefreq>weekly</changefreq>';
+        $xml .= '<priority>' . ($url === '/' ? '1.0' : '0.8') . '</priority>';
+        $xml .= '</url>';
+    }
+
+    $xml .= '</urlset>';
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
+});
